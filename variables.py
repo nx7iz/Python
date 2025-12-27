@@ -1,4 +1,4 @@
-students_count = 1000
+students_count: int = 1000
 rating = 4.99
 is_published = False
 course_name = """
@@ -37,14 +37,14 @@ Lines
 # print(full)
 
 # Strings
-# course = "    Python Programming     "
+# course = "Python Programming"
 # print(course.upper())
 # print(course.lower())
 # print(course.title())
 
 # print(course.strip())
 
-# print(course.find("pro")) # returns index
+# print(course.find("Pro")) # returns index
 
 # print("Programming" in course)
 # print("Programming" not in course)
@@ -87,7 +87,8 @@ Lines
 
 # Type Conversion
 # x = input("x: ")
-# # y = x + 1
+# y = int(x) + 1
+# print(y)
 
 # # Type conversion
 # print(int(x))
@@ -135,7 +136,7 @@ Lines
 # for x in ['a', 'b', 'c']:
 #     print(x)
 
-# for x in range(0, 10, 2):
+# for x in range(0, 10, 2): # start, end, step
 #     print(x)
 
 # print(type(range(5)))
@@ -144,7 +145,8 @@ Lines
 # For-Else
 # names = ['John', 'Bob', 'Mosh', 'Sarah']
 # for name in names:
-#     if name.startswith("J"):
+#     print(name)
+#     if name.startswith("h"):
 #         print("Found!")
 #         break
 # else:
@@ -157,16 +159,19 @@ Lines
 # while answer != guess:
 #     guess = int(input("Guess: "))
 # else:
-#     pass
+#     print("You guessed it!")
+
+# tuple -> immutable(read only), list -> mutable
+# point = (1, 2)
 
 # Functions
-# def increment(number: int, by: int=1) -> tuple:
+# def increment(number: int, by: int = 1) -> tuple:
 #     return number, number + by
 
 
-# print(increment(2))
+# print(increment(2, by=3))  # keyword argument
 
-# *args. wait, what?
+# *args. wait, what? -> variable number of arguments
 # def multiply(*list):
 #     total = 1
 #     for number in list:
@@ -176,8 +181,8 @@ Lines
 
 # print(multiply(2, 3, 4, 5))
 
-# **args
 
+# **args -> keyword arguments(name = value)
 
 # def save_user(**user):
 #     print(user["name"])
@@ -185,8 +190,15 @@ Lines
 
 # save_user(id=1, name='Admin')
 
+# message = "a"
+
 # def greet():
-#     message = "a"
+#     global message
+#     message = "Hello"
+#     print(message)
+
+# print(message)
+
 
 # def multiply(*numbers):
 #     total = 1
@@ -200,15 +212,15 @@ Lines
 # print("Finish")
 
 
-def fizz_buzz(input):
-    pass
-    if (input % 3 == 0) and (input % 5 == 0):
-        return "FizzBuzz"
-    if input % 3 == 0:
-        return "Fizz"
-    if input % 5 == 0:
-        return "Buzz"
-    return input
+# def fizz_buzz(input):
+#     pass
+#     if (input % 3 == 0) and (input % 5 == 0):
+#         return "FizzBuzz"
+#     if input % 3 == 0:
+#         return "Fizz"
+#     if input % 5 == 0:
+#         return "Buzz"
+#     return input
 
 
-print(fizz_buzz(3))
+# print(fizz_buzz(3))
